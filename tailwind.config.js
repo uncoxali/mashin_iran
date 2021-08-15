@@ -56,6 +56,8 @@ module.exports = {
             },
             width: {
                 'max-content': 'max-content',
+                '70': '17.5rem',
+                '97': '26rem',
             },
             maxWidth: {
                 '8xl': '1920px',
@@ -77,6 +79,10 @@ module.exports = {
                 brown: {
                     ...colors.brown,
                     50: '#692B06',
+                },
+                gren: {
+                    ...colors.gren,
+                    50: '#007554',
                 },
             },
             textColor: {},
