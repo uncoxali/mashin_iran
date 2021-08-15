@@ -8,6 +8,7 @@ const Auth = () => {
     const router = useRouter();
 
     const handleClick = () => {
+        sessionStorage.setItem('name', 'login');
         router.push('/');
     };
 
