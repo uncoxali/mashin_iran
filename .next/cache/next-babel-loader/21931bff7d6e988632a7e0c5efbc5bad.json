@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { all, takeLatest } from 'redux-saga/effects';\nimport { setMeData } from '../reducers/user';\n\nfunction* setData(action) {\n  return action;\n}\n\nexport default function* root() {\n  yield all([takeLatest(setMeData.type, setData)]);\n}","map":null,"metadata":{},"sourceType":"module"}

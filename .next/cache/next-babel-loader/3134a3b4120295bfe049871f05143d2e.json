@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { all, fork } from 'redux-saga/effects';\nimport user from './user';\nexport default function* root() {\n  yield all([fork(user)]);\n}","map":null,"metadata":{},"sourceType":"module"}

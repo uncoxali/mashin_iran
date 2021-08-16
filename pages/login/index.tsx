@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useTimer } from 'react-timer-hook';
+
 import UserIcon from '@assets/svg/user-icon.svg';
 import Close from '@assets/svg/close.svg';
 
-const Auth = () => {
+import ReactCodeInput from 'react-code-input';
+
+const Auth: FC = () => {
     const [login, setLogin] = useState<string>('l1');
     const [times, setTimer] = useState<any>();
     const router = useRouter();
@@ -37,8 +40,28 @@ const Auth = () => {
         }
     };
 
+    const props = {
+        inputStyle: {
+            appearance: 'none',
+            direction: 'rtl',
+            textAlign: 'center',
+            outline: 'none',
+            fontFamily: 'monospace',
+            margin: '4px',
+            MozAppearance: 'textfield',
+            width: '40px',
+            borderRadius: '50%',
+            fontSize: '20px',
+            height: '40px',
+            paddingLeft: '7px',
+            backgroundColor: 'white',
+            color: '#FF5800',
+            border: '2px solid #FF5800',
+        },
+    };
+
     return (
-        <div className="w-full h-screen bg-red-100 flex justify-center items-center">
+        <div className="w-full h-screen bg-red-100 flex justify-center items-center outline-none">
             <div className="text-center">
                 <div className="b flex justify-center">
                     <img className="w-20 h-20 flex justify-center" src="/images/logo.png" alt="" />
@@ -81,7 +104,32 @@ const Auth = () => {
                         </div>
 
                         <div className="mt-5 flex justify-center">
-                            <input
+                            <ReactCodeInput
+                                fields={4}
+                                type="tel"
+                                inputStyle={{
+                                    direction: 'ltr',
+                                    textAlign: 'center',
+                                    outline: 'none',
+                                    margin: '4px',
+                                    MozAppearance: 'textfield',
+                                    width: '40px',
+                                    borderRadius: '50%',
+                                    font: 'bold',
+                                    fontSize: '20px',
+                                    height: '40px',
+                                    backgroundColor: 'white',
+                                    color: '#FF5800',
+                                    border: '2px solid #FF5800',
+                                    fontWeight: 'bold',
+                                }}
+                                pattern="/^\d+$/"
+                                name={'code'}
+                                inputMode="numeric"
+                                autoFocus
+                            />
+
+                            {/* <input
                                 type="text"
                                 className="border border-red-50 rounded-full h-10 w-10 ml-2 outline-none text-center text-lg text-red-50 font-bold"
                             />
@@ -96,7 +144,7 @@ const Auth = () => {
                             <input
                                 type="text"
                                 className="border border-red-50 rounded-full h-10 w-10 ml-2 outline-none text-center text-lg text-red-50 font-bold"
-                            />
+                            /> */}
                         </div>
                         <div className="flex justify-center mt-3">
                             ارسال دوباره <span className="text-gren-50 mr-5">01:00</span>
