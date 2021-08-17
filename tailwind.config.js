@@ -10,6 +10,9 @@ module.exports = {
     theme: {
         extend: {
             zIndex: {},
+            fontSize: {
+                'xx': '.6rem',
+            },
             keyframes: {
                 opacity: {
                     from: {
@@ -58,6 +61,7 @@ module.exports = {
                 'max-content': 'max-content',
                 '70': '17.5rem',
                 '97': '26rem',
+                '86': '22rem',
             },
             maxWidth: {
                 '8xl': '1920px',
@@ -83,6 +87,10 @@ module.exports = {
                 gren: {
                     ...colors.gren,
                     50: '#007554',
+                },
+                black: {
+                    ...colors.black,
+                    50: '#2D2927',
                 },
             },
             textColor: {},

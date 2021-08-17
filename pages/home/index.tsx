@@ -1,112 +1,92 @@
 import React from 'react';
 import Card from '@components/Card';
 const card = [
-    { 'title': 'نمایشگاه', id: 1 },
-    { 'title': 'جستجوی پیشرفته', id: 2 },
-    { 'title': 'افزودن اگهی', id: 3 },
-    { 'title': 'صفحه ی شما', id: 4 },
+    { 'title': 'نمایشگاه', img: '/images/car1.png', id: 1 },
+    { 'title': 'جستجوی پیشرفته', img: '/images/car2.png', id: 2 },
+    { 'title': 'افزودن اگهی', img: '/images/car3.png', id: 3 },
+    { 'title': 'صفحه ی شما', img: '/images/car1.png', id: 4 },
 ];
 const car = [
     {
-        img: '/images/car.png',
+        img: 'https://www.mad4wheels.com/img/free-car-images/desktop/19021/mclaren-765lt-spider-2022-thumb.jpg',
         model: 2021,
         km: 53,
         city: 'زنجان',
         price: '45,000,000',
         show: 'سید',
-        name: 'رونیز',
+        name: ' McLaren 765LT spider',
     },
     {
-        img: '/images/car3.png',
+        img: 'https://www.mad4wheels.com/img/free-car-images/desktop/19017/ferrari-sf90-stradale-by-novitec-2021-thumb.jpg',
         model: 2010,
         km: 100,
         city: 'بابل',
         price: '5,000,000',
         show: 'احمدی',
-        name: 'پژو',
+        name: ' Ferrari SF90 ',
     },
     {
-        img: '/images/car1.png',
+        img: 'https://www.mad4wheels.com/img/free-car-images/desktop/18999/ferrari-f8-tributo-by-novitec-n-largo-2021-thumb.jpg',
         model: 2015,
         km: 5000,
         city: 'سهرورد',
         price: '85,000,000',
         show: 'محمدی',
-        name: 'پراید',
+        name: ' Ferrari F8',
     },
     {
-        img: '/images/car3.png',
+        img: 'https://www.mad4wheels.com/img/free-car-images/desktop/19011/aston-martin-valhalla-2022-thumb.jpg',
         model: 2000,
         km: 300,
         city: 'تهران',
         price: '555,000,000',
         show: 'سید',
-        name: 'بنز',
+        name: 'Porsche',
     },
     {
-        img: '/images/car1.png',
+        img: 'https://www.mad4wheels.com/img/free-car-images/desktop/18962/rml-short-wheelbase-2022-thumb.jpg',
         model: 2020,
         km: 565,
         city: 'مازندران',
         price: '412,000,000',
         show: 'رضای',
-        name: 'سمند',
+        name: 'RML Short Wheelbase',
     },
     {
-        img: '/images/car3.png',
-        model: 2019,
+        img: 'https://www.mad4wheels.com/img/free-car-images/desktop/18961/porsche-911-992-gt3-with-touring-package-2021-thumb.jpg',
+        model: 2022,
         km: 64185,
         city: 'رشت',
         price: '445,000,000',
         show: 'محمدی',
-        name: 'تیبا',
-    },
-    {
-        img: '/images/car2.png',
-        model: 2014,
-        km: 15153,
-        city: 'کرج',
-        price: '845,000,000',
-        show: 'احمدی',
-        name: 'نیسان',
-    },
-    {
-        img: '/images/car3.png',
-        model: 2017,
-        km: 57873,
-        city: 'قیدار',
-        price: '945,000,000',
-        show: 'علی',
-        name: 'BMW',
-    },
-    {
-        img: '/images/car2.png',
-        model: 2012,
-        km: 5123,
-        city: 'قیدار',
-        price: '345,000,000',
-        show: 'محمد',
-        name: 'پراید 131',
+        name: 'Aston Martin Valhalla',
     },
 ];
 
 export default function index() {
     return (
         <div>
-            <div className="relative px-36">
+            <div className="relative lg:px-36 md:px-32">
                 <div className="">
                     <div className=" mt-32 flex justify-center items-center">
                         {card.map((item) => (
                             <div className="" key={item.id}>
-                                <div className="bg-green-500 w-48 h-24 rounded-2xl flex justify-center items-center mr-10 text-sm">
-                                    <p>{item.title}</p>
+                                <div className="lg:block md:block hidden ">
+                                    <div className="bg-black-50 rounded-2xl flex justify-center items-center mr-10 text-sm">
+                                        <img
+                                            className="opacity-25 w-48 h-24 object-cover"
+                                            src={item.img}
+                                            alt=""
+                                        />
+                                        <span className="absolute text-white">{item.title}</span>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-            <div className="mt-20">
+            <div className="lg:mt-20 md:mt-16 mt-4">
                 <Card data={car} />
             </div>
         </div>

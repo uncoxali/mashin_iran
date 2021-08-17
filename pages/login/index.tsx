@@ -40,26 +40,6 @@ const Auth: FC = () => {
         }
     };
 
-    const props = {
-        inputStyle: {
-            appearance: 'none',
-            direction: 'rtl',
-            textAlign: 'center',
-            outline: 'none',
-            fontFamily: 'monospace',
-            margin: '4px',
-            MozAppearance: 'textfield',
-            width: '40px',
-            borderRadius: '50%',
-            fontSize: '20px',
-            height: '40px',
-            paddingLeft: '7px',
-            backgroundColor: 'white',
-            color: '#FF5800',
-            border: '2px solid #FF5800',
-        },
-    };
-
     return (
         <div className="w-full h-screen bg-red-100 flex justify-center items-center outline-none">
             <div className="text-center">
@@ -127,6 +107,7 @@ const Auth: FC = () => {
                                 name={'code'}
                                 inputMode="numeric"
                                 autoFocus
+                                isValid={true}
                             />
 
                             {/* <input
