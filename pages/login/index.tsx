@@ -40,6 +40,14 @@ const Auth: FC = () => {
         }
     };
 
+    const [color, setColor] = useState<string>('');
+
+    const handleChange = (e: any) => {
+        setColor(e);
+    };
+
+    console.log(color);
+
     return (
         <div className="w-full h-screen bg-red-100 flex justify-center items-center outline-none">
             <div className="text-center">
@@ -83,12 +91,11 @@ const Auth: FC = () => {
                             <p className="mr-3 text-gren-50">09104866595</p>
                         </div>
 
-                        <div className="mt-5 flex justify-center">
+                        <div className="mt-5 flex justify-center" dir="ltr">
                             <ReactCodeInput
                                 fields={4}
                                 type="tel"
                                 inputStyle={{
-                                    direction: 'ltr',
                                     textAlign: 'center',
                                     outline: 'none',
                                     margin: '4px',
@@ -98,16 +105,15 @@ const Auth: FC = () => {
                                     font: 'bold',
                                     fontSize: '20px',
                                     height: '40px',
-                                    backgroundColor: 'white',
-                                    color: '#FF5800',
+                                    backgroundColor: `${color.length > 0 ? '#FF5800' : 'white'}`,
+                                    color: '#blue',
                                     border: '2px solid #FF5800',
                                     fontWeight: 'bold',
                                 }}
                                 pattern="/^\d+$/"
                                 name={'code'}
                                 inputMode="numeric"
-                                autoFocus
-                                isValid={true}
+                                onChange={(e) => handleChange(e)}
                             />
 
                             {/* <input

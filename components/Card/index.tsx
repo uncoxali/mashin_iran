@@ -20,7 +20,7 @@ const index: FC<Props> = ({ data }) => {
                         <div className="">
                             <img
                                 src={i.img}
-                                className="lg:w-44 md:w-44 lg:h-64 md:h-64 h-64 object-cover rounded-r-xl"
+                                className="lg:w-44 md:w-44 lg:h-64 md:h-64 h-64 object-cover rounded-r-xl "
                                 alt=""
                             />
                             <div className="absolute flex -mt-10">
@@ -49,7 +49,7 @@ const index: FC<Props> = ({ data }) => {
                                 </div>
                             </div>
                             <hr
-                                className="h-1 bg-black lg:w-60 md:w-60 w-52 mr-1 absolute"
+                                className="h-1 bg-black lg:w-60 md:w-60 w-52  absolute"
                                 style={{ marginTop: '11px' }}
                             />
                             <div
