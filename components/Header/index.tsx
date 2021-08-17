@@ -40,9 +40,9 @@ export default function index() {
                             </div>
                         </div>
                     </div>
-                    <div className="lg:hidden md:hidden block mt-5">
-                        <div className=" flex justify-center  ml-20">
-                            <div className="bg-gray-200 h-10 w-64 rounded-full flex justify-between items-center">
+                    <div className="lg:hidden md:hidden block mt-3">
+                        <div className="flex justify-center">
+                            <div className="bg-gray-200 h-10 lg:w-64 rounded-full flex ">
                                 <input
                                     type="text"
                                     className="bg-transparent outline-none mr-5 placeholder-black text-sm"
