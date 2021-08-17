@@ -41,7 +41,7 @@ export default function index() {
                         </div>
                     </div>
                     <div className="lg:hidden md:hidden block mt-3">
-                        <div className="flex justify-center">
+                        <div className="flex justify-center ">
                             <div className="bg-gray-200 h-10 lg:w-64 rounded-full flex ">
                                 <input
                                     type="text"

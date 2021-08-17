@@ -21,6 +21,7 @@ const Index = () => {
                     <Home />
                 </div>
             </div>
+            <div className="w-full h-52 bg-red-100"></div>
         </Layout>
     );
 };

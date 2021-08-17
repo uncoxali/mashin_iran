@@ -35,25 +35,35 @@ const index: FC<Props> = ({ data }) => {
                         <div className="">
                             <div className="flex mr-2 mt-4 lg:w-60 md:w-60 w-52 h-10 justify-between ">
                                 <div className="flex text-xs  items-center">
-                                    <img src="/images/avatar.png" alt="" />
-                                    <p className="mr-2">نمایشگاه </p>
+                                    <img className="w-10 h-10 object-cover" src={i.avatar} alt="" />
+                                    <p className="mr-2">نمایشگاه {i.names}</p>
                                 </div>
-                                <div className="flex justify-center items-center ">
-                                    <div className="w-6 h-6 rounded-full bg-green-700 flex items-center justify-center ml-2">
+                                <div
+                                    className={` ${
+                                        i.key ? 'block' : 'hidden'
+                                    } flex justify-center items-center `}
+                                >
+                                    <div className="w-8 h-8 rounded-full bg-green-700 flex items-center justify-center ml-2">
                                         <Key className="w-5 h-5" />
-                                    </div>
-                                    <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center ml-2">
-                                        <Star className="w-5 h-5" />
                                     </div>
                                 </div>
                             </div>
                             <hr
-                                className=" mt-3 bg-black lg:w-60 md:w-60 w-52 mr-1"
-                                style={{ height: '2px' }}
+                                className="h-1 bg-black lg:w-60 md:w-60 w-52 mr-1 absolute"
+                                style={{ marginTop: '11px' }}
                             />
-                            <div className="lg:mt-6 md:mt-5 mt-4">
+                            <div
+                                className={` ${
+                                    i.special ? 'block' : 'hidden'
+                                } -mr-2 h-5 w-full flex justify-end mt-3`}
+                            >
+                                <div className="h-10 bg-red-50 w-7 rounded-b-full flex items-center justify-center text-white border border-black-50">
+                                    <p className="text-xs">ویژه</p>
+                                </div>
+                            </div>
+                            <div className={` ${i.special ? '-mt-5' : 'mt-5'}`}>
                                 <div className="text-sm mr-7">
-                                    <p className="mt-3">{i.name}</p>
+                                    <p className="mt-3">{i.car}</p>
                                     <p className="mt-3">مدل {i.model}</p>
                                     <p className="mt-3">کیلو متر {i.km}</p>
                                     <p className="mt-3">{i.city}</p>
