@@ -33,7 +33,7 @@ const index: FC<Props> = ({ data }) => {
                             </div>
                         </div>
                         <div className="">
-                            <div className="flex mr-2 mt-3 lg:w-60 md:w-60 w-52 h-10 justify-between ">
+                            <div className="flex mr-2 mt-4 lg:w-60 md:w-60 w-52 h-10 justify-between ">
                                 <div className="flex text-xs  items-center">
                                     <img src="/images/avatar.png" alt="" />
                                     <p className="mr-2">نمایشگاه </p>
