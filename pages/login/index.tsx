@@ -105,8 +105,8 @@ const Auth: FC = () => {
                                     font: 'bold',
                                     fontSize: '20px',
                                     height: '40px',
-                                    backgroundColor: `${color.length > 0 ? '#FF5800' : 'white'}`,
-                                    color: '#blue',
+                                    backgroundColor: `${color}`,
+                                    color: 'white',
                                     border: '2px solid #FF5800',
                                     fontWeight: 'bold',
                                 }}

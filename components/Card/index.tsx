@@ -11,11 +11,11 @@ interface Props {
 const index: FC<Props> = ({ data }) => {
     return (
         <div className="flex justify-center">
-            <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-5 lg:py-5 md:px-5 ">
-                {data?.map((i) => (
+            <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-1 grid-cols-1 lg:px-5 lg:py-5 md:px-5">
+                {data?.map((i, index) => (
                     <div
-                        className="lg:w-97 md:w-97 w-86 lg:h-64 md:h-64 h-64 bg-white rounded-2xl  lg:ml-5 flex "
-                        key={i.km}
+                        className="lg:w-97 md:w-97 w-86 lg:h-64 md:h-64 h-64 bg-white rounded-2xl  lg:ml-5 flex"
+                        key={index}
                     >
                         <div className="">
                             <img
