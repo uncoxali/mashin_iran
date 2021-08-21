@@ -62,6 +62,10 @@ module.exports = {
                 '70': '17.5rem',
                 '97': '26rem',
                 '86': '22rem',
+                '76': '19.5rem',
+            },
+            height: {
+                '11': '0.10rem',
             },
             maxWidth: {
                 '8xl': '1920px',
@@ -71,6 +75,10 @@ module.exports = {
                 gray: {
                     ...colors.gray,
                     250: '#E5E5E5',
+                },
+                watusi: {
+                    ...colors.watusi,
+                    250: '#FFE0D2',
                 },
                 green: {
                     ...colors.green,
@@ -91,6 +99,10 @@ module.exports = {
                 black: {
                     ...colors.black,
                     50: '#2D2927',
+                },
+                blacks: {
+                    ...colors.blacks,
+                    100: '#000',
                 },
             },
             textColor: {},

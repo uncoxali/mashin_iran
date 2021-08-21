@@ -40,24 +40,16 @@ const Auth: FC = () => {
         }
     };
 
-    const [color, setColor] = useState<string>('');
-
-    const handleChange = (e: any) => {
-        setColor(e);
-    };
-
-    console.log(color);
-
     return (
         <div className="w-full h-screen bg-red-100 flex justify-center items-center outline-none">
             <div className="text-center">
                 <div className="b flex justify-center">
-                    <img className="w-20 h-20 flex justify-center" src="/images/logo.png" alt="" />
+                    <img className="w-16 h-16 flex justify-center" src="/images/logo.png" alt="" />
                 </div>
                 <div>
                     <p className="mt-2 text-sm font-bold">ماشین ایران</p>
                 </div>
-                <div className="bg-white w-80 h-auto mt-2 rounded-xl shadow-2xl p-5">
+                <div className="bg-white w-86 h-auto mt-2 rounded-xl p-5">
                     <div className="bg-red-50 h-12 w-auto rounded-full ">
                         <div className="flex justify-between px-3 ">
                             <div className="flex mt-3">
@@ -77,7 +69,7 @@ const Auth: FC = () => {
                         <input
                             dir="ltr"
                             type="text"
-                            className="border border-red-50 rounded-full h-10 w-70  mt-5 text-brown-50 text-lg outline-none p-3"
+                            className="border border-red-50 rounded-full h-10 w-76  mt-5 text-brown-50 text-lg outline-none p-3"
                             defaultValue="09"
                         />
                     </div>
@@ -105,33 +97,15 @@ const Auth: FC = () => {
                                     font: 'bold',
                                     fontSize: '20px',
                                     height: '40px',
-                                    backgroundColor: `${color}`,
-                                    color: 'white',
+                                    backgroundColor: `white`,
+                                    color: 'red',
                                     border: '2px solid #FF5800',
                                     fontWeight: 'bold',
                                 }}
                                 pattern="/^\d+$/"
                                 name={'code'}
                                 inputMode="numeric"
-                                onChange={(e) => handleChange(e)}
                             />
-
-                            {/* <input
-                                type="text"
-                                className="border border-red-50 rounded-full h-10 w-10 ml-2 outline-none text-center text-lg text-red-50 font-bold"
-                            />
-                            <input
-                                type="text"
-                                className="border border-red-50 rounded-full h-10 w-10 ml-2 outline-none text-center text-lg text-red-50 font-bold"
-                            />
-                            <input
-                                type="text"
-                                className="border border-red-50 rounded-full h-10 w-10 ml-2 outline-none text-center text-lg text-red-50 font-bold"
-                            />
-                            <input
-                                type="text"
-                                className="border border-red-50 rounded-full h-10 w-10 ml-2 outline-none text-center text-lg text-red-50 font-bold"
-                            /> */}
                         </div>
                         <div className="flex justify-center mt-3">
                             ارسال دوباره <span className="text-gren-50 mr-5">01:00</span>

@@ -2,7 +2,7 @@ import { login } from '@store/reducers/user';
 import router from 'next/router';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Layout from '@components/Layout';
+import Layout from '@components/ui/Layout';
 
 import Home from './home';
 import Login from './login';

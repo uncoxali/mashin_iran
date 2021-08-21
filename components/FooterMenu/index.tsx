@@ -15,17 +15,14 @@ const index = () => {
                             <Bag className="lg:block md:block hidden" />
                             <p className="lg:mr-3 md:mr-3 ml-5">نمایشگاه</p>
                         </div>
-                        <div className="flex items-center lg:justify-center md:justify-center lg:w-40 md:w-36 w-20">
-                            <Search className="lg:block md:block hidden" />
-                            <p className="mr-2 ">جستجوی پیشرفته</p>
-                        </div>
+
                         <div className="flex items-center  lg:justify-center md:justify-center lg:w-40 md:w-36  w-20">
                             <PaperPlus className="lg:block md:block hidden" />
                             <p className="mr-2 ">افزودن آگهی</p>
                         </div>
                         <div className="flex items-center  lg:justify-center md:justify-center  lg:w-40 md:w-36 w-20">
                             <Paper className="lg:block md:block hidden" />
-                            <p className="mr-4">صفحهی شما</p>
+                            <p className="mr-4">صفحه ی شما</p>
                         </div>
                     </div>
                 </div>
