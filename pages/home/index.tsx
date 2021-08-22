@@ -117,7 +117,7 @@ const cars = [
 export default function index() {
     return (
         <div>
-            <div className="py-28 lg:mt-0 md:mt-0 ">
+            <div className="py-28 lg:mt-0 md:mt-0 mt-14">
                 <div className="lg:block md:block hidden">
                     <div className="mb-5 flex justify-between p-1 px-5">
                         <div className="flex justify-between  w-72">
