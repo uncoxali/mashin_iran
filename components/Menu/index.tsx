@@ -18,13 +18,7 @@ const index: FC<Props> = ({ menu, handleClick }) => {
                         ? ' transition-all duration-300 w-72 bg-white'
                         : ' transition-all duration-300 w-0'
                 }   h-screen z-50 absolute w-0 p-3`}
-            >
-                <div className="flex justify-end ml-5">
-                    <div className="cursor-pointer" onClick={handleClick}>
-                        بستن
-                    </div>
-                </div>
-            </div>
+            ></div>
         </div>
     );
 };

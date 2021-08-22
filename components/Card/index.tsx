@@ -12,12 +12,12 @@ interface Props {
 
 const index: FC<Props> = ({ data }) => {
     return (
-        <div className="flex justify-center z-0">
+        <div className="flex justify-center z-0 ">
             <div className="flex justify-between px-5">
-                <div className=" lg:block md:block hidden">
+                <div className=" lg:block md:block hidden ml-5">
                     <Filter />
                 </div>
-                <div className="grid gap-4 xl:grid-cols-3 md:grid-cols-1 grid-cols-1 lg:px-5">
+                <div className="grid gap-4 2xl:grid-cols-3 xg:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-5">
                     {data?.map((i, index) => (
                         <div
                             className="lg:w-96 md:w-97 w-86 lg:h-60 md:h-64 h-64 bg-white rounded-2xl  lg:ml-5 flex"
