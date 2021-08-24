@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\nimport Card from '@components/Card';\nimport Car from '@components/Car';\nexport default function index() {\n  return /*#__PURE__*/_jsx(\"div\", {\n    children: /*#__PURE__*/_jsx(Card, {\n      data: Car\n    })\n  });\n}","map":null,"metadata":{},"sourceType":"module"}

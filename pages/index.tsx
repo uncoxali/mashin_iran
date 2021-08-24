@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import Layout from '@components/ui/Layout';
 
 import Home from './home';
+import Exhibition from './exhibition';
 import Login from './login';
 
 const Index = () => {

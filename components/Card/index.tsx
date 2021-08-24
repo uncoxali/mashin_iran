@@ -20,13 +20,13 @@ const index: FC<Props> = ({ data }) => {
                 <div className="grid gap-4 2xl:grid-cols-3 xg:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-5">
                     {data?.map((i, index) => (
                         <div
-                            className="lg:w-96 md:w-97 w-86 lg:h-60 md:h-64 h-64 bg-white rounded-2xl  lg:ml-5 flex"
+                            className="lg:w-auto md:w-auto w-auto lg:h-60 md:h-64 h-64 bg-white rounded-2xl  lg:ml-5 flex"
                             key={index}
                         >
                             <div className="">
                                 <img
                                     src={i.img}
-                                    className="lg:w-44 md:w-44 lg:h-60 md:h-64 h-64 object-cover rounded-r-xl "
+                                    className="lg:w-52 md:w-52 lg:h-60 md:h-64 h-64 object-cover rounded-r-xl "
                                     alt=""
                                 />
                                 <div className="absolute flex -mt-10">
@@ -73,12 +73,30 @@ const index: FC<Props> = ({ data }) => {
                                 </div>
                                 <div className={` ${i.special ? '-mt-5' : 'mt-5'}`}>
                                     <div className="text-sm mr-7">
-                                        <p className="mt-3">{i.car}</p>
-                                        <p className="mt-3">مدل {i.model}</p>
-                                        <p className="mt-3">کیلو متر {i.km}</p>
+                                        <p className={`${i.button ? 'hidden' : 'block'} mt-3`}>
+                                            {i.car}
+                                        </p>
+                                        <p className={`${i.button ? 'hidden' : 'block'} mt-3`}>
+                                            مدل {i.model}
+                                        </p>
+                                        <p className={`${i.button ? 'hidden' : 'block'} mt-3`}>
+                                            کیلو متر {i.km}
+                                        </p>
+                                        <p className={`${i.button ? 'block' : 'hidden'}`}>
+                                            {i.names}
+                                        </p>
                                         <p className="mt-3">{i.city}</p>
                                         <p className="mt-3">{i.price}</p>
                                     </div>
+                                </div>
+                                <div
+                                    className={`${
+                                        i.button ? 'block' : 'hidden'
+                                    } flex justify-center text-white text-sm mt-5`}
+                                >
+                                    <button className="bg-red-50 rounded-xl p-3 mt-7">
+                                        ورود به نمایشگاه{' '}
+                                    </button>
                                 </div>
                             </div>
                         </div>
