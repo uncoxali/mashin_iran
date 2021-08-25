@@ -1,12 +1,8 @@
-import { login } from '@store/reducers/user';
 import router from 'next/router';
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import Layout from '@components/ui/Layout';
-
-import Home from './home';
 import Exhibition from './exhibition';
-import Login from './login';
+import Home from './home';
 
 const Index = () => {
     useEffect(() => {
@@ -22,7 +18,6 @@ const Index = () => {
                     <Home />
                 </div>
             </div>
-            <div className="w-full h-52 bg-red-100"></div>
         </Layout>
     );
 };
