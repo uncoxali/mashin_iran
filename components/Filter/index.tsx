@@ -11,6 +11,7 @@ const index: FC<Props> = ({ show }) => {
     const router = useRouter();
 
     const [filters, setFilters] = React.useState<any>();
+
     React.useEffect(() => {
         if (router.pathname === '/') {
             setFilters(Filter);

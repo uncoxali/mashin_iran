@@ -8,7 +8,7 @@ interface Props {
 
 const index: FC<Props> = ({ children }) => {
     return (
-        <div>
+        <div className="">
             <div>
                 <Header />
             </div>

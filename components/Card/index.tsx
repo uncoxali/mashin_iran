@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Filter from '@components/Filter';
+import Modal from '@components/ui/Modal';
 
 import Heart from '@assets/svg/ci_heart-fill.svg';
 import Share from '@assets/svg/ci_share.svg';
@@ -22,10 +23,12 @@ const index: FC<Props> = ({ data }) => {
 
     return (
         <div>
+            <Modal show={show} handleClick={handleShow} />
             <div className="lg:block md:block ">
                 <div className="mb-5 flex justify-between p-1 px-5">
                     <div className="flex justify-between  lg:w-72 md:w-64">
                         <div
+                            onClick={handleShow}
                             className={`${
                                 show ? 'mr-0' : 'lg:mr-10 md:mr-10 '
                             } bg-black-50 w-24 h-10 rounded-full  border-2 border-white flex justify-start items-center`}

@@ -83,8 +83,10 @@ const exhibition = [
 export default function index() {
     return (
         <Layout>
-            <div className="py-28 lg:mt-0 md:mt-0 mt-14 h-auto bg-red-100 lg:px-16">
-                <Card data={exhibition} />
+            <div>
+                <div className="py-28 lg:mt-0 md:mt-0 mt-14 h-auto bg-red-100 lg:px-16 flex justify-center">
+                    <Card data={exhibition} />
+                </div>
             </div>
         </Layout>
     );

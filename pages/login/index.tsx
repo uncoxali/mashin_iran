@@ -42,7 +42,7 @@ const Auth: FC = () => {
 
     return (
         <div className="w-full h-screen bg-red-100 flex justify-center items-center outline-none">
-            <div className="text-center mb-28">
+            <div className="text-center mb-28 ">
                 <div className=" flex justify-center">
                     <img className="w-16 h-16 flex justify-center" src="/images/logo.png" alt="" />
                 </div>

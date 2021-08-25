@@ -11,7 +11,6 @@ import Menu from '@assets/svg/menu.svg';
 export default function index() {
     const router = useRouter();
     const [menu, setMenu] = React.useState<boolean>(false);
-    const [change, setChange] = React.useState<boolean>(false);
 
     const handleMenu = () => {
         setMenu(!menu);
@@ -41,7 +40,7 @@ export default function index() {
                                 </div>
                             </div>
                             <div className="lg:block md:block hidden">
-                                <div className="bg-gray-200 h-10 w-96 rounded-full flex justify-between items-center">
+                                <div className="bg-gray-200 h-10 w-96 rounded-full flex justify-between items-center border-2 border-white">
                                     <input
                                         type="text"
                                         className="bg-transparent outline-none mr-5 placeholder-black text-sm"
@@ -84,7 +83,7 @@ export default function index() {
                         </div>
                         <div className="lg:hidden md:hidden block mt-3">
                             <div className="flex justify-center ">
-                                <div className="bg-gray-200 h-10 lg:w-64 rounded-full flex ">
+                                <div className="bg-gray-200 h-10 lg:w-64 rounded-full flex  border-2 border-white">
                                     <input
                                         type="text"
                                         className="bg-transparent outline-none mr-5 placeholder-black text-sm"
