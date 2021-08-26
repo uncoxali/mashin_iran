@@ -31,7 +31,7 @@ const index: FC<Props> = ({ show, handleClick }) => {
                     className={` lg:hidden md:hidden block w-full h-screen  overflow-y-auto top-0 fixed z-50 bg-white`}
                 >
                     <div className="">
-                        <div className="w-full h-12 bg-white flex justify-between p-2">
+                        <div className="w-full h-12 bg-white flex justify-between p-4">
                             <div
                                 className={`${
                                     show ? 'mr-0' : 'lg:mr-10 md:mr-10 '

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Filter from '@components/Filter';
 import Modal from '@components/ui/Modal';
+import { useRouter } from 'next/router';
 
 import Heart from '@assets/svg/ci_heart-fill.svg';
 import Share from '@assets/svg/ci_share.svg';
@@ -27,36 +28,30 @@ const index: FC<Props> = ({ data }) => {
             <div className="lg:block md:block ">
                 <div className="mb-5 flex justify-between p-1 px-5">
                     <div className="flex justify-between  lg:w-72 md:w-64">
-                        <div className="lg:block md:block hidden">
-                            <div
-                                className={`${
-                                    show ? 'mr-0' : 'lg:mr-10 md:mr-10 '
-                                } bg-black-50 w-24 h-10 rounded-full  border-2 border-white flex justify-start items-center`}
-                            >
-                                <div
-                                    className={` bg-black-50 w-10 h-10 rounded-full flex justify-center items-center border-2 border-white`}
-                                >
-                                    <FilterIcon />
-                                </div>
-                                <p className="text-white text-xs mr-2">فیلتر</p>
-                            </div>
-                        </div>
-                        <div className={``}>
+                        <div className="">
                             <div
                                 onClick={handleShow}
-                                className="bg-black-50 w-10 h-10 rounded-full flex justify-center items-center border-2 border-white"
+                                className={`${
+                                    show ? 'mr-0' : 'lg:mr-10 md:mr-10 '
+                                } bg-black-50 w-32 h-10 rounded-full  border-2 border-white flex justify-start items-center cursor-pointer`}
                             >
+                                <div
+                                    className={` bg-black-50 w-14 h-10 rounded-full flex justify-center items-center border-2 border-white`}
+                                >
+                                    <FilterIcon className="h-6 w-6" />
+                                </div>
+                                <p className="text-white text-xs mr-2">فیلتر</p>
                                 <Arrow
                                     className={`${
                                         show
                                             ? ' transform rotate-180 transition-all duration-1000'
                                             : '  transition-all duration-1000'
-                                    }`}
+                                    } mr-5 h-6 w-10`}
                                 />
                             </div>
                         </div>
                     </div>
-                    <div className="w-36 bg-black-50 h-10 rounded-full lg:ml-12 md:ml-10  flex justify-between text-xs text-white items-center">
+                    <div className="w-36 bg-black-50 h-10 rounded-full lg:ml-12 md:ml-10  flex justify-between text-xs border-2 border-white text-white items-center">
                         <div className="w-10 h-10 border-2 border-white rounded-full flex justify-center items-center">
                             <Filter1 className="w-6 h-6" />
                         </div>

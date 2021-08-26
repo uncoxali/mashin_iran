@@ -11,11 +11,19 @@ import Menu from '@assets/svg/menu.svg';
 export default function index() {
     const router = useRouter();
     const [menu, setMenu] = React.useState<boolean>(false);
+    const [searchTitle, setSearchTitle] = React.useState<string>('');
 
     const handleMenu = () => {
         setMenu(!menu);
     };
-    const handleChange = () => {};
+
+    React.useEffect(() => {
+        if (router.pathname === '/exhibition') {
+            setSearchTitle('نمایشگاه');
+        } else {
+            setSearchTitle('نام خودرو');
+        }
+    });
 
     return (
         <div className="">
@@ -44,7 +52,7 @@ export default function index() {
                                     <input
                                         type="text"
                                         className="bg-transparent outline-none mr-5 placeholder-black text-sm"
-                                        placeholder="نام خودرو"
+                                        placeholder={searchTitle}
                                     />
                                     <div
                                         className={` bg-blacks-100 w-36 h-10 rounded-full flex text-white text-center text-xs select-none border-2 border-white`}
@@ -87,7 +95,7 @@ export default function index() {
                                     <input
                                         type="text"
                                         className="bg-transparent outline-none mr-5 placeholder-black text-sm"
-                                        placeholder="نام خودرو"
+                                        placeholder={searchTitle}
                                     />
                                     <div
                                         className={` bg-blacks-100 w-36 h-10 rounded-full flex text-white text-center text-xs select-none  border-2 border-white`}
