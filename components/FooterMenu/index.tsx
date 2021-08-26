@@ -1,7 +1,15 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import PlusIcon from '@assets/svg/Plus.svg';
 
 const index = () => {
+    // const router = useRouter()
+
+    // const [show , setShow] = React.useState<boolean>(false)
+
+    //     React.useEffect(() => {
+    //         if(router.pathname === 'exhibition') setShow(true)
+    //     })
     return (
         <div className="lg:hidden md:hidden block">
             <div className="flex justify-center ">

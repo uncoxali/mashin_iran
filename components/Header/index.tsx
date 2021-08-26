@@ -47,7 +47,7 @@ export default function index() {
                                         placeholder="نام خودرو"
                                     />
                                     <div
-                                        className={` bg-blacks-100 w-36 h-10 rounded-full flex text-white text-center text-xs select-none`}
+                                        className={` bg-blacks-100 w-36 h-10 rounded-full flex text-white text-center text-xs select-none border-2 border-white`}
                                     >
                                         <div className="flex items-center">
                                             <Link href="/">
@@ -90,7 +90,7 @@ export default function index() {
                                         placeholder="نام خودرو"
                                     />
                                     <div
-                                        className={` bg-blacks-100 w-36 h-10 rounded-full flex text-white text-center text-xs select-none`}
+                                        className={` bg-blacks-100 w-36 h-10 rounded-full flex text-white text-center text-xs select-none  border-2 border-white`}
                                     >
                                         <div className="flex items-center">
                                             <Link href="/">
