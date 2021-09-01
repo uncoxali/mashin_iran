@@ -28,31 +28,33 @@ const index: FC<Props> = ({ data }) => {
             <div className="lg:block md:block ">
                 <div className="mb-5 flex justify-between p-1 px-5">
                     <div className="flex justify-between  lg:w-72 md:w-64">
-                        <div className="">
+                        <div className="flex justify-between  w-60">
                             <div
                                 onClick={handleShow}
                                 className={`${
                                     show ? 'mr-0' : 'lg:mr-10 md:mr-10 '
-                                } bg-black-50 w-32 h-10 rounded-full  border-2 border-white flex justify-start items-center cursor-pointer`}
+                                } bg-black-50 w-28 h-10 rounded-full  border-2 border-white flex justify-start items-center cursor-pointer`}
                             >
                                 <div
-                                    className={` bg-black-50 w-14 h-10 rounded-full flex justify-center items-center border-2 border-white`}
+                                    className={` bg-black-50 w-10 h-10 rounded-full flex justify-center items-center border-4 border-white`}
                                 >
                                     <FilterIcon className="h-6 w-6" />
                                 </div>
                                 <p className="text-white text-xs mr-2">فیلتر</p>
+                            </div>
+                            <div className="bg-black-50 w-10 h-10 rounded-full flex justify-center items-center">
                                 <Arrow
                                     className={`${
                                         show
-                                            ? ' transform rotate-180 transition-all duration-1000'
-                                            : '  transition-all duration-1000'
-                                    } mr-5 h-6 w-10`}
+                                            ? ' transform rotate-180 transition-all duration-300'
+                                            : '  transition-all duration-300'
+                                    } `}
                                 />
                             </div>
                         </div>
                     </div>
                     <div className="w-36 bg-black-50 h-10 rounded-full lg:ml-12 md:ml-10  flex justify-between text-xs border-2 border-white text-white items-center">
-                        <div className="w-10 h-10 border-2 border-white rounded-full flex justify-center items-center">
+                        <div className="w-10 h-10 border-4 border-white rounded-full flex justify-center items-center">
                             <Filter1 className="w-6 h-6" />
                         </div>
                         <p>مرتب سازی</p>
@@ -66,16 +68,16 @@ const index: FC<Props> = ({ data }) => {
                         <Filter show={show} />
                     </div>
 
-                    <div className="grid gap-2 2xl:grid-cols-3 xg:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-5">
+                    <div className="grid gap-2 2xl:grid-cols-3  xg:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-5">
                         {data?.map((i, index) => (
                             <div
-                                className="lg:w-auto md:w-auto w-auto lg:h-60 md:h-64 h-64 bg-white rounded-2xl  lg:ml-5 flex"
+                                className="lg:w-auto md:w-auto w-auto lg:h-52 md:h-52 h-52 bg-white rounded-2xl  lg:ml-5 flex shadow-2xl"
                                 key={index}
                             >
                                 <div className="">
                                     <img
                                         src={i.img}
-                                        className="lg:w-52 md:w-60 lg:h-60 md:h-64 h-64 object-cover rounded-r-xl "
+                                        className="lg:w-52 md:w-52 lg:h-52 md:h-52 h-52 object-cover rounded-r-xl "
                                         alt=""
                                     />
                                     <div className="flex justify-between -mt-10">
@@ -108,7 +110,7 @@ const index: FC<Props> = ({ data }) => {
                                         <div
                                             className={` ${
                                                 i.key ? 'block' : 'hidden'
-                                            } flex justify-center items-center `}
+                                            } ml-3 flex justify-center items-center `}
                                         >
                                             <div className="w-8 h-8 rounded-full bg-green-700 flex items-center justify-center lg:ml-2 md:ml-2 ml-3">
                                                 <Key className="w-5 h-5" />
@@ -116,13 +118,13 @@ const index: FC<Props> = ({ data }) => {
                                         </div>
                                     </div>
                                     <hr
-                                        className="h-1 bg-black lg:w-60 md:w-60 w-52  absolute"
+                                        className="h-1 bg-black lg:w-52 md:w-52 w-52  absolute mr-5"
                                         style={{ marginTop: '11px' }}
                                     />
                                     <div
                                         className={` ${
                                             i.special ? 'block' : 'hidden'
-                                        } -mr-2 h-5 w-full flex justify-end mt-3`}
+                                        } -mr-5 h-5 w-full flex justify-end mt-3`}
                                     >
                                         <div className="h-10 bg-red-50 w-7 rounded-b-full flex items-center justify-center text-white border border-black-50">
                                             <p className="text-xs">ویژه</p>
@@ -130,20 +132,20 @@ const index: FC<Props> = ({ data }) => {
                                     </div>
                                     <div className={` ${i.special ? '-mt-5' : 'mt-5'} -mr-2`}>
                                         <div className="text-sm mr-7">
-                                            <p className={`${i.button ? 'hidden' : 'block'} mt-3`}>
+                                            <p className={`${i.button ? 'hidden' : 'block'} mt-1`}>
                                                 {i.car}
                                             </p>
-                                            <p className={`${i.button ? 'hidden' : 'block'} mt-3`}>
+                                            <p className={`${i.button ? 'hidden' : 'block'} mt-1`}>
                                                 مدل {i.model}
                                             </p>
-                                            <p className={`${i.button ? 'hidden' : 'block'} mt-3`}>
+                                            <p className={`${i.button ? 'hidden' : 'block'} mt-1`}>
                                                 کیلو متر {i.km}
                                             </p>
                                             <p className={`${i.button ? 'block' : 'hidden'}`}>
                                                 {i.names}
                                             </p>
-                                            <p className="mt-3">{i.city}</p>
-                                            <p className="mt-3">{i.price}</p>
+                                            <p className="mt-1">{i.city}</p>
+                                            <p className="mt-1">{i.price}</p>
                                         </div>
                                     </div>
                                     <div

@@ -25,9 +25,9 @@ const index: FC<Props> = ({ show }) => {
             <div
                 className={` ${
                     show
-                        ? 'transition-all duration-200 w-52 h-auto bg-white p-3'
+                        ? 'transition-all duration-200 w-60 h-auto bg-white p-3'
                         : 'transition-all duration-200  w-0  bg-white'
-                } row-span-1 rounded-lg`}
+                } row-span-1 rounded-lg shadow-2xl`}
             >
                 {show ? (
                     <div className={` row-span-1 rounded-lg `}>

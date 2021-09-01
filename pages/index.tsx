@@ -13,7 +13,7 @@ const Index = () => {
 
     return (
         <Layout>
-            <div className=" w-full h-auto bg-red-100">
+            <div className=" w-full h-auto bg-white">
                 <div className="flex justify-center ">
                     <Home />
                 </div>

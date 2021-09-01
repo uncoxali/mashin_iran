@@ -1,12 +1,15 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import ActiveLink from '@components/ui/ActiveLink';
 
 import SideBar from '@components/Menu';
 import Notification from '@assets/svg/Notification.svg';
 import Profile from '@assets/svg/Profile.svg';
-import Search from '@assets/svg/Search.svg';
 import Menu from '@assets/svg/menu.svg';
+import Subtract from '@assets/svg/Subtract.svg';
+import Plus from '@assets/svg/Plus2.svg';
+import Home from '@assets/svg/home.svg';
 
 export default function index() {
     const router = useRouter();
@@ -29,105 +32,61 @@ export default function index() {
         <div className="">
             <div className="w-full top-0 fixed z-10">
                 <div className="relative">
-                    <div className="absolute top-0 lg:h-20 md:h-20 h-24 w-full bg-white lg:rounded-b-full md:rounded-b-3xl rounded-b-3xl p-3 shadow-lg">
-                        <div className="flex justify-between items-center lg:px-14 md:px-12 px-7">
-                            <div className="flex ml-10">
-                                <div className="w-8 h-8 bg-gray-200 flex justify-center items-center rounded-xl">
-                                    <Menu className="w-5 h-5" onClick={handleMenu} />
-                                </div>
-                                <div className="w-8 h-8 bg-gray-200 flex justify-center items-center rounded-xl mr-5">
-                                    <Notification className="w-6 h-6" />
-                                </div>
-                                <div className="w-8 h-8 bg-gray-200 flex justify-center items-center rounded-xl mr-5">
-                                    <Profile className="w-6 h-6" />
-                                </div>
-                                <div className="mr-5 lg:block md:block hidden">
-                                    <button className="bg-red-50 px-5 p-2 rounded-xl text-white text-sm">
-                                        افزودن آگهی
-                                    </button>
-                                </div>
-                            </div>
-                            <div className="lg:block md:block hidden">
-                                <div className="bg-gray-200 h-10 w-96 rounded-full flex justify-between items-center border-2 border-white">
-                                    <input
-                                        type="text"
-                                        className="bg-transparent outline-none mr-5 placeholder-black text-sm"
-                                        placeholder={searchTitle}
-                                    />
+                    <div className="">
+                        <div className="w-full top-0 fixed z-10 bg-white h-24 shadow-2xl flex  items-center">
+                            <div className="flex justify-between px-10 w-full">
+                                <div className="flex justify-between w-24">
                                     <div
-                                        className={` bg-blacks-100 w-36 h-10 rounded-full flex text-white text-center text-xs select-none border-2 border-white`}
+                                        onClick={handleMenu}
+                                        className="bg-gray-250 p-2 rounded-lg"
                                     >
-                                        <div className="flex items-center">
-                                            <Link href="/">
-                                                <a
-                                                    className={`${
-                                                        router.pathname == '/'
-                                                            ? 'bg-red-50 rounded-full'
-                                                            : ''
-                                                    } flex justify-center items-center p-1 h-10`}
-                                                >
-                                                    <span className="p-3"> خودرو</span>
-                                                </a>
-                                            </Link>
-
-                                            <Link href="/exhibition">
-                                                <a
-                                                    className={`  ${
-                                                        router.pathname == '/exhibition'
-                                                            ? 'bg-red-50'
-                                                            : ''
-                                                    } mr-3 h-10  rounded-full flex justify-center items-center`}
-                                                >
-                                                    <span className="p-3"> نمایشگاه</span>
-                                                </a>
-                                            </Link>
-                                        </div>
+                                        <Menu className="w-5 h-5" />
+                                    </div>
+                                    <div className="bg-gray-250 p-2 rounded-lg">
+                                        <Notification className="w-5 h-5" />
                                     </div>
                                 </div>
-                            </div>
-                            <div>
-                                <img className="w-12 h-12 mr-10" src="/images/logo.png" />
-                            </div>
-                        </div>
-                        <div className="lg:hidden md:hidden block mt-3">
-                            <div className="flex justify-center ">
-                                <div className="bg-gray-200 h-10 lg:w-64 rounded-full flex  border-2 border-white">
-                                    <input
-                                        type="text"
-                                        className="bg-transparent outline-none mr-5 placeholder-black text-sm"
-                                        placeholder={searchTitle}
-                                    />
-                                    <div
-                                        className={` bg-blacks-100 w-36 h-10 rounded-full flex text-white text-center text-xs select-none  border-2 border-white`}
-                                    >
-                                        <div className="flex items-center">
-                                            <Link href="/">
-                                                <a
-                                                    className={`${
-                                                        router.pathname == '/'
-                                                            ? 'bg-red-50 rounded-full'
-                                                            : ''
-                                                    } flex justify-center items-center p-1 h-10`}
-                                                >
-                                                    <span className="p-3"> خودرو</span>
-                                                </a>
-                                            </Link>
+                                <div className="w-1/2 flex justify-between text-xs items-center">
+                                    <div className=" flex justify-between items-center">
+                                        <Plus
+                                            fill={router.asPath === '/' ? '#FF4E00' : ''}
+                                            className="w-6 h-6 ml-4"
+                                        />
+                                        <p>افزودن آگهی</p>
+                                    </div>
 
-                                            <Link href="/exhibition">
-                                                <a
-                                                    className={`  ${
-                                                        router.pathname == '/exhibition'
-                                                            ? 'bg-red-50'
-                                                            : ''
-                                                    } mr-3 h-10  rounded-full flex justify-center items-center`}
-                                                >
-                                                    <span className="p-3"> نمایشگاه</span>
-                                                </a>
-                                            </Link>
-                                        </div>
+                                    <ActiveLink href="/">
+                                        <Subtract
+                                            fill={router.asPath === '/' ? '#FF4E00' : ''}
+                                            className="w-6 h-6 ml-4 "
+                                        />
+                                        <p>خودرو</p>
+                                    </ActiveLink>
+
+                                    <div>
+                                        <ActiveLink href="/exhibition">
+                                            <Home
+                                                fill={
+                                                    router.asPath === '/exhibition' ? '#FF4E00' : ''
+                                                }
+                                                className="w-6 h-6 ml-4"
+                                            />
+                                            <p>نمایشگاهی</p>
+                                        </ActiveLink>
+                                    </div>
+                                    <div className=" flex justify-between items-center">
+                                        <Profile
+                                            fill={router.asPath === '/' ? '#FF4E00' : ''}
+                                            className="w-6 h-6 ml-4"
+                                        />
+                                        <p>صفحه ی من</p>
                                     </div>
                                 </div>
+                                <div>
+                                    <img className="w-10 h-10" src="/images/logo.png" alt="" />
+                                </div>
                             </div>
+                            <SideBar menu={menu} handleClick={handleMenu} />
                         </div>
                     </div>
                 </div>
