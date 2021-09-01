@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 interface Props {
     href: string;
-    children: any;
+    children: React.ReactNode;
 }
 const activLink: FC<Props> = ({ href, children }) => {
     const router = useRouter();
@@ -17,9 +17,10 @@ const activLink: FC<Props> = ({ href, children }) => {
     return (
         <div>
             <div
+                style={{ height: '1px' }}
                 className={`${
                     router.asPath === href ? 'bg-red-50' : ''
-                } w-32 h-1 -mr-2  absolute bottom-3 lg:block md:block hidden`}
+                } w-32 -mr-2  absolute bottom-3 lg:block md:block hidden`}
             ></div>
             <Link href={href}>
                 <a

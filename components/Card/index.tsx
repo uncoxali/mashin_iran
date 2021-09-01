@@ -1,15 +1,13 @@
 import React, { FC } from 'react';
 import Filter from '@components/Filter';
 import Modal from '@components/ui/Modal';
+import FilterNav from '@components/FilterNav';
 import { useRouter } from 'next/router';
 
 import Heart from '@assets/svg/ci_heart-fill.svg';
 import Share from '@assets/svg/ci_share.svg';
 import Gallery from '@assets/svg/gallery.svg';
 import Key from '@assets/svg/key.svg';
-import Arrow from '@assets/svg/arrow.svg';
-import FilterIcon from '@assets/svg/filter.svg';
-import Filter1 from '@assets/svg/filter1.svg';
 
 interface Props {
     data?: any[];
@@ -25,50 +23,27 @@ const index: FC<Props> = ({ data }) => {
     return (
         <div>
             <Modal show={show} handleClick={handleShow} />
-            <div className="lg:block md:block ">
-                <div className="mb-5 flex justify-between p-1 px-5">
-                    <div className="flex justify-between  lg:w-72 md:w-64">
-                        <div className="flex justify-between  w-60">
-                            <div
-                                onClick={handleShow}
-                                className={`${
-                                    show ? 'mr-0' : 'lg:mr-10 md:mr-10 '
-                                } bg-black-50 w-28 h-10 rounded-full  border-2 border-white flex justify-start items-center cursor-pointer`}
-                            >
-                                <div
-                                    className={` bg-black-50 w-10 h-10 rounded-full flex justify-center items-center border-4 border-white`}
-                                >
-                                    <FilterIcon className="h-6 w-6" />
-                                </div>
-                                <p className="text-white text-xs mr-2">فیلتر</p>
-                            </div>
-                            <div className="bg-black-50 w-10 h-10 rounded-full flex justify-center items-center">
-                                <Arrow
-                                    className={`${
-                                        show
-                                            ? ' transform rotate-180 transition-all duration-300'
-                                            : '  transition-all duration-300'
-                                    } `}
-                                />
-                            </div>
+            <div className="lg:block md:block lg:my-28 md:my-24">
+                <FilterNav handleShow={handleShow} show={show} />
+                <div className={`${show ? 'block' : 'hidden'} w-full flex justify-center`}>
+                    <div className="h-10 w-1/2 flex ml-28 pt-5">
+                        <div className="h-7 w-28 rounded-full border border-red-50 text-xs flex justify-between items-center">
+                            <p className="mr-3">ایران خودرو</p>
+                            <p className="ml-3 mt-1">X</p>
                         </div>
-                    </div>
-                    <div className="w-36 bg-black-50 h-10 rounded-full lg:ml-12 md:ml-10  flex justify-between text-xs border-2 border-white text-white items-center">
-                        <div className="w-10 h-10 border-4 border-white rounded-full flex justify-center items-center">
-                            <Filter1 className="w-6 h-6" />
+                        <div className="h-7 mr-3 w-28 rounded-full border border-red-50 text-xs flex justify-between items-center">
+                            <p className="mr-3">قرقوش</p>
+                            <p className="ml-3 mt-1">X</p>
                         </div>
-                        <p>مرتب سازی</p>
-                        <Arrow />
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center z-0 ">
+            <div className="flex justify-center z-0 lg:-mt-20 md:-mt-20">
                 <div className="flex justify-between px-5">
-                    <div className={` lg:block md:block hidden ml-5`}>
+                    <div className={` lg:block md:block hidden ml-5 ${show ? '-mt-16' : ''}`}>
                         <Filter show={show} />
                     </div>
-
-                    <div className="grid gap-2 2xl:grid-cols-3  xg:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-5">
+                    <div className="grid gap-2 2xl:grid-cols-3  xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-5 ">
                         {data?.map((i, index) => (
                             <div
                                 className="lg:w-auto md:w-auto w-auto lg:h-52 md:h-52 h-52 bg-white rounded-2xl  lg:ml-5 flex shadow-2xl"

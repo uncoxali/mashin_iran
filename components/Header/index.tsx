@@ -14,26 +14,17 @@ import Home from '@assets/svg/home.svg';
 export default function index() {
     const router = useRouter();
     const [menu, setMenu] = React.useState<boolean>(false);
-    const [searchTitle, setSearchTitle] = React.useState<string>('');
 
     const handleMenu = () => {
         setMenu(!menu);
     };
-
-    React.useEffect(() => {
-        if (router.pathname === '/exhibition') {
-            setSearchTitle('نمایشگاه');
-        } else {
-            setSearchTitle('نام خودرو');
-        }
-    });
 
     return (
         <div className="">
             <div className="w-full top-0 fixed z-10">
                 <div className="relative">
                     <div className="">
-                        <div className="w-full top-0 fixed z-10 bg-white h-24 shadow-2xl flex  items-center">
+                        <div className="w-full top-0 fixed z-10 bg-white h-24 border-b-2 border-gray-300 flex  items-center">
                             <div className="flex justify-between px-10 w-full">
                                 <div className="flex justify-between w-24">
                                     <div
@@ -63,17 +54,14 @@ export default function index() {
                                         <p>خودرو</p>
                                     </ActiveLink>
 
-                                    <div>
-                                        <ActiveLink href="/exhibition">
-                                            <Home
-                                                fill={
-                                                    router.asPath === '/exhibition' ? '#FF4E00' : ''
-                                                }
-                                                className="w-6 h-6 ml-4"
-                                            />
-                                            <p>نمایشگاهی</p>
-                                        </ActiveLink>
-                                    </div>
+                                    <ActiveLink href="/exhibition">
+                                        <Home
+                                            fill={router.asPath === '/exhibition' ? '#FF4E00' : ''}
+                                            className="w-6 h-6 ml-4"
+                                        />
+                                        <p>نمایشگاهی</p>
+                                    </ActiveLink>
+
                                     <div className=" flex justify-between items-center">
                                         <Profile
                                             fill={router.asPath === '/' ? '#FF4E00' : ''}

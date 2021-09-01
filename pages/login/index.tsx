@@ -41,7 +41,7 @@ const Auth: FC = () => {
     };
 
     return (
-        <div className="w-full h-screen bg-red-100 flex justify-center items-center outline-none">
+        <div className="w-full h-screen bg-white flex justify-center items-center outline-none">
             <div className="text-center mb-28 ">
                 <div className=" flex justify-center">
                     <img className="w-16 h-16 flex justify-center" src="/images/logo.png" alt="" />
@@ -49,7 +49,7 @@ const Auth: FC = () => {
                 <div>
                     <p className="mt-2 text-sm font-bold">ماشین ایران</p>
                 </div>
-                <div className="bg-white w-86 h-auto mt-2 rounded-xl p-5">
+                <div className="bg-white w-86 h-auto mt-2 rounded-xl p-5 shadow-lg">
                     <div className="bg-red-50 h-12 w-auto rounded-full ">
                         <div className="flex justify-between px-3 ">
                             <div className="flex mt-3">
@@ -141,6 +141,11 @@ const Auth: FC = () => {
                             بازگشت
                         </button>
                     </div>
+                </div>
+                <div className="text-xx mt-3 ml-5">
+                    شما با ورود به ماشین ایران{' '}
+                    <span className="text-red-50 cursor-pointer">شرایط و ضوابط</span> تایین شده را
+                    می پذیرید .
                 </div>
             </div>
         </div>
