@@ -40,9 +40,9 @@ const index: FC<Props> = ({ menu, handleClick }) => {
                 <div
                     className={` ${
                         menu
-                            ? ' transition-all duration-300 w-64 bg-white border-l-2 border-red-50'
-                            : ' transition-all duration-300 w-0'
-                    }   h-screen z-50 absolute w-0 px-3`}
+                            ? 'transform transition-all duration-300 w-64  bg-white border-l-2 border-red-50'
+                            : 'transform transition-all duration-200 w-0 '
+                    }   h-screen z-30 absolute px-3 `}
                 >
                     {menu ? (
                         <div className="">
@@ -53,13 +53,6 @@ const index: FC<Props> = ({ menu, handleClick }) => {
                                         <p className="">نمایشگاه احمدی</p>
                                         <p className="">کد نمایندگی : whh5476</p>
                                         <p className="mt-2">09104866595</p>
-                                    </div>
-
-                                    <div
-                                        className="absolute mr-80 text-white mt-5 cursor-pointer w-8 h-8 bg-white rounded-full flex justify-center items-center"
-                                        onClick={handleClick}
-                                    >
-                                        <Arrow />
                                     </div>
                                 </div>
                             </div>

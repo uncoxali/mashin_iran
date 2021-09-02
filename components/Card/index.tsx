@@ -23,7 +23,7 @@ const index: FC<Props> = ({ data }) => {
     return (
         <div>
             <Modal show={show} handleClick={handleShow} />
-            <div className="lg:block md:block lg:my-28 md:my-24">
+            <div className="lg:block md:block lg:my-28 md:my-24 my-24">
                 <FilterNav handleShow={handleShow} show={show} />
                 <div className={`${show ? 'block' : 'hidden'} w-full flex justify-center`}>
                     <div className="h-10 w-1/2 flex ml-28 pt-5">
@@ -38,21 +38,21 @@ const index: FC<Props> = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center z-0 lg:-mt-20 md:-mt-20">
+            <div className="flex justify-center  lg:-mt-20 md:-mt-20 -mt-16">
                 <div className="flex justify-between px-5">
                     <div className={` lg:block md:block hidden ml-5 ${show ? '-mt-16' : ''}`}>
                         <Filter show={show} />
                     </div>
-                    <div className="grid gap-2 2xl:grid-cols-3  xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-5 ">
+                    <div className="grid gap-6 2xl:grid-cols-3  xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:px-5 ">
                         {data?.map((i, index) => (
                             <div
-                                className="lg:w-auto md:w-auto w-auto lg:h-52 md:h-52 h-52 bg-white rounded-2xl  lg:ml-5 flex shadow-2xl"
+                                className="lg:w-auto md:w-auto w-auto lg:h-48 md:h-52 h-52 bg-white rounded-2xl  lg:ml-5 flex shadow-2xl"
                                 key={index}
                             >
                                 <div className="">
                                     <img
                                         src={i.img}
-                                        className="lg:w-52 md:w-52 lg:h-52 md:h-52 h-52 object-cover rounded-r-xl "
+                                        className="lg:w-52 md:w-52 w-44 lg:h-48 md:h-52 h-52 object-cover rounded-r-xl "
                                         alt=""
                                     />
                                     <div className="flex justify-between -mt-10">
@@ -83,9 +83,9 @@ const index: FC<Props> = ({ data }) => {
                                             <p className="mr-2">نمایشگاه {i.names}</p>
                                         </div>
                                         <div
-                                            className={` ${
-                                                i.key ? 'block' : 'hidden'
-                                            } ml-3 flex justify-center items-center `}
+                                            className={` ${i.key ? 'block' : 'hidden'} ${
+                                                show ? 'ml-8' : '-mr-2'
+                                            } flex justify-center items-center `}
                                         >
                                             <div className="w-8 h-8 rounded-full bg-green-700 flex items-center justify-center lg:ml-2 md:ml-2 ml-3">
                                                 <Key className="w-5 h-5" />
@@ -97,16 +97,16 @@ const index: FC<Props> = ({ data }) => {
                                         style={{ marginTop: '11px' }}
                                     />
                                     <div
-                                        className={` ${
-                                            i.special ? 'block' : 'hidden'
-                                        } -mr-5 h-5 w-full flex justify-end mt-3`}
+                                        className={` ${i.special ? 'block' : 'hidden'} ${
+                                            show ? '-mr-10' : '-mr-2'
+                                        } h-5 w-full flex justify-end mt-3`}
                                     >
                                         <div className="h-10 bg-red-50 w-7 rounded-b-full flex items-center justify-center text-white border border-black-50">
                                             <p className="text-xs">ویژه</p>
                                         </div>
                                     </div>
-                                    <div className={` ${i.special ? '-mt-5' : 'mt-5'} -mr-2`}>
-                                        <div className="text-sm mr-7">
+                                    <div className={` ${i.special ? '-mt-5' : 'mt-5'} -mr-2 `}>
+                                        <div className="text-xs mr-7">
                                             <p className={`${i.button ? 'hidden' : 'block'} mt-1`}>
                                                 {i.car}
                                             </p>

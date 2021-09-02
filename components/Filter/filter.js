@@ -18,7 +18,7 @@ const filter = [
     { name: 'گیربکس', arrow: <Arrow /> },
     { name: 'سوخت', arrow: <Arrow /> },
     { name: 'وضعیت بدنه', arrow: <Arrow /> },
-    { title: 'قیمت', icon: <Chart />, line: true },
+    { title: 'قیمت', icon: <Chart />, line: true, price: true },
 ];
 
 export default filter;

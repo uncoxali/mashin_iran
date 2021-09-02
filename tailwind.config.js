@@ -9,7 +9,11 @@ module.exports = {
     darkMode: 'media', // 'media' or 'class'
     theme: {
         extend: {
-            zIndex: {},
+            zIndex: {
+                '5': 5,
+                '75': 75,
+                '100': 100,
+            },
             fontSize: {
                 'xx': '.6rem',
             },
@@ -64,6 +68,7 @@ module.exports = {
                 '86': '22rem',
                 '76': '19.5rem',
                 '18': '5rem',
+                '100': '30rem',
             },
             height: {
                 '11': '0.10rem',

@@ -5,6 +5,7 @@ import Filter from '@components/Filter';
 
 import FilterNav from '@components/FilterNav';
 import Layout from '@components/ui/Layout';
+import CardExhibitation from '@components/CardExhibition';
 import FilterIcon from '@assets/svg/filter.svg';
 import Arrow from '@assets/svg/arrow.svg';
 import SearchIcon from '@assets/svg/search1.svg';
@@ -92,11 +93,11 @@ export default function index() {
     };
     return (
         <Layout>
-            <div>
-                <div className="py-28 lg:mt-0 md:mt-0 mt-14 h-auto bg-white lg:px-16 flex justify-center">
-                    <div className="top-0 bg-white h-24 w-full fixed my-24 shadow-lg">
+            <div className=" w-full h-auto bg-white my-28">
+                <div className="absolute z-5">
+                    <div className="top-0 bg-white h-24 w-full fixed my-20 shadow-lg">
                         <div className="flex justify-center items-center w-full h-24">
-                            <div className="bg-gray-200 h-10 rounded-full w-1/3 flex justify-between">
+                            <div className="bg-gray-200 h-10 rounded-full lg:w-1/3 md:w-1/2 w-72 flex justify-between">
                                 <input
                                     type="text"
                                     className=" bg-transparent w-3/4 outline-none mr-5 placeholder-black-50 text-center text-sm"
@@ -109,8 +110,9 @@ export default function index() {
                         </div>
                     </div>
                 </div>
-                <FilterNav handleShow={handleShow} show={show} />
-                <Filter show={show} />
+                <div className="flex justify-center ">
+                    <CardExhibitation data={exhibition} />
+                </div>
             </div>
         </Layout>
     );
