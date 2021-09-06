@@ -14,6 +14,7 @@ interface Props {
 }
 
 const index: FC<Props> = ({ data }) => {
+    const router = useRouter();
     const [show, setShow] = React.useState<boolean>(false);
 
     const handleShow = () => {
@@ -58,13 +59,21 @@ const index: FC<Props> = ({ data }) => {
                                     <div>
                                         <div className="relative">
                                             <div className="absolute -mt-10 mr-3">
-                                                <div className="bg-red-50 w-auto h-8 text-xs text-white rounded-full p-2">
+                                                <div
+                                                    onClick={() => {
+                                                        router.push({
+                                                            pathname: '/users',
+                                                            query: { id: i.id },
+                                                        });
+                                                    }}
+                                                    className="bg-red-50 w-auto h-8 text-xs text-white rounded-full p-2 cursor-pointer"
+                                                >
                                                     نمایشگاه ماشین ایران
                                                 </div>
                                             </div>
                                             <div className="flex justify-center">
                                                 <div className="absolute right-20 mt-3">
-                                                    <div className="">name</div>
+                                                    <div className="">{i.names}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -87,7 +96,7 @@ const index: FC<Props> = ({ data }) => {
                                         <div className="relative">
                                             <div className="flex justify-center">
                                                 <div className="absolute right-20 -mt-5">
-                                                    <div className="">name</div>
+                                                    <div className="">{i.city}</div>
                                                 </div>
                                             </div>
                                         </div>

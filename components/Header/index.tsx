@@ -39,13 +39,13 @@ export default function index() {
                                 </div>
 
                                 <div className="lg:w-1/2 md:w-1/2 flex justify-between text-xs items-center">
-                                    <div className=" flex justify-between items-center">
+                                    <ActiveLink href="/add">
                                         <Plus
                                             fill={router.asPath === '/' ? '#FF4E00' : ''}
                                             className="w-6 h-6 ml-4"
                                         />
                                         <p>افزودن آگهی</p>
-                                    </div>
+                                    </ActiveLink>
 
                                     <ActiveLink href="/">
                                         <Subtract

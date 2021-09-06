@@ -18,6 +18,7 @@ const exhibition = [
         names: 'علی محمدی',
         city: 'زنجان',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 1,
     },
     {
         img: '/images/image/image2.png',
@@ -26,6 +27,7 @@ const exhibition = [
         names: ' سید احمدی',
         city: 'مازندران',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 2,
     },
     {
         img: '/images/image/image3.png',
@@ -34,6 +36,7 @@ const exhibition = [
         names: 'دکتر میرکمالی',
         city: 'مازندران',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 3,
     },
     {
         img: '/images/image/image4.png',
@@ -42,6 +45,7 @@ const exhibition = [
         names: 'رضای',
         city: 'اردبیل',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 4,
     },
     {
         img: '/images/image/image5.png',
@@ -50,6 +54,7 @@ const exhibition = [
         names: 'عسگری',
         city: 'تهران',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 5,
     },
     {
         img: '/images/image/image6.png',
@@ -58,6 +63,7 @@ const exhibition = [
         names: 'دایی',
         city: 'کرج',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 6,
     },
     {
         img: '/images/image/image7.png',
@@ -66,6 +72,7 @@ const exhibition = [
         names: 'رجبی',
         city: 'ماهدشت',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 7,
     },
     {
         img: '/images/image/image8.png',
@@ -74,6 +81,7 @@ const exhibition = [
         names: 'عبدی',
         city: 'ورامین',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 8,
     },
     {
         img: '/images/image/image9.png',
@@ -82,6 +90,7 @@ const exhibition = [
         names: 'امیری',
         city: 'سهرورد',
         avatar: 'https://www.mad4wheels.com/img/car-brand-logo/desktop/lamborghini.jpg',
+        id: 9,
     },
 ];
 
