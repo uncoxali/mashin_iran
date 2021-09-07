@@ -1,13 +1,6 @@
 import React from 'react';
-import Card from '@components/Card';
-import Car from '@components/Car';
-import Filter from '@components/Filter';
-
-import FilterNav from '@components/FilterNav';
 import Layout from '@components/ui/Layout';
 import CardExhibitation from '@components/CardExhibition';
-import FilterIcon from '@assets/svg/filter.svg';
-import Arrow from '@assets/svg/arrow.svg';
 import SearchIcon from '@assets/svg/search1.svg';
 
 const exhibition = [

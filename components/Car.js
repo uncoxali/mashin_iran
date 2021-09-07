@@ -1,4 +1,4 @@
-const cards = [
+export const Cards = [
     {
         img: 'https://www.mad4wheels.com/img/free-car-images/desktop/19021/mclaren-765lt-spider-2022-thumb.jpg',
         model: 2021,
@@ -117,5 +117,3 @@ const cards = [
         count: 10,
     },
 ];
-
-export default cards;

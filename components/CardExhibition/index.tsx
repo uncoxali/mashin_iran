@@ -60,12 +60,12 @@ const index: FC<Props> = ({ data }) => {
                                         <div className="relative">
                                             <div className="absolute -mt-10 mr-3">
                                                 <div
-                                                    onClick={() => {
-                                                        router.push({
-                                                            pathname: '/users',
-                                                            query: { id: i.id },
-                                                        });
-                                                    }}
+                                                    // onClick={() => {
+                                                    //     router.push({
+                                                    //         pathname: '/users',
+                                                    //         query: { id: i.id },
+                                                    //     });
+                                                    // }}
                                                     className="bg-red-50 w-auto h-8 text-xs text-white rounded-full p-2 cursor-pointer"
                                                 >
                                                     نمایشگاه ماشین ایران
