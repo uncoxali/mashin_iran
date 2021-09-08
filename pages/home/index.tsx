@@ -1,7 +1,6 @@
 import React from 'react';
 import Cards from '@components/Car';
 import Card from '@components/Card';
-import SearchIcon from '@assets/svg/search1.svg';
 
 import { useRouter } from 'next/router';
 
